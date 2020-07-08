@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> 车车 | C语言贪食蛇小游戏 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="一个普通大学生">
+    
+    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://chechez.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://chechez.github.io/post/c/">
+    
+    
+    <script type="text/javascript" src="https://chechez.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chechez.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="C语言贪食蛇小游戏"/>
+<meta name="twitter:description" content="本次用Visual Studio 2019 以及easyX软件实现
+1.建立源文件,写出最基本的三个c语句#{}r0; 加入#include&lt;graphics.h&gt;即 easyX软件，#include&lt;conio.h&gt; 时间 ，#include&lt;mmsystem.h&gt;
+2.main函数里 initgraph(宽，高)创建游戏空间的大小,closegraph();用于关闭工作空间,之后定义游戏的背景 setbcolor（RGB(,,,)） cleardevice（） 刷新屏幕 否则；背景不能够刷新_getch();防止闪屏：等待用户输入一个字符，"/>
+
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://chechez.github.io/images/touxiang.jpg" alt="profile picture">
+        <h3 title=""><a href="/">车车的博客</a></h3>
+        <div class="description">
+          <p>一个普通大学生</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://de.linkedin.com/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/lxndrblz/anatole/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:mail@alexbilz.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; 车车 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">首页</a></li>
+        
+        
+        <li><a  href="/post/" title="">C语言</a></li>
+        
+        
+        <li><a  href="/about/" title="">关于</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>C语言贪食蛇小游戏
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i><span class="date">Wed, Jul 8, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+        </div>
+        
+        </div>
+
+    <p>本次用Visual Studio 2019 以及easyX软件实现</p>
+<p>1.建立源文件,写出最基本的三个c语句#{}r0; 加入#include&lt;graphics.h&gt;即 easyX软件，#include&lt;conio.h&gt; 时间 ，#include&lt;mmsystem.h&gt;</p>
+<p>2.main函数里 initgraph(宽，高)创建游戏空间的大小,closegraph();用于关闭工作空间,之后定义游戏的背景 setbcolor（RGB(,,,)） cleardevice（） 刷新屏幕 否则；背景不能够刷新_getch();防止闪屏：等待用户输入一个字符，</p>
+<p>3.明确游戏的坐标 x，y轴，</p>
+<p>（1）定义所有坐标x，y，便于以后嵌套</p>
+<p>（2）结构体 嵌套定义蛇的位置xy[]数组 int 方向，以及蛇不断增强的长度 int num</p>
+<p>（3）结构体 嵌套食物的坐标fdxy flag标记 ，grade分数
+4.//枚举 方向enum position{up,down,left,right};</p>
+<p>5.main函数中一个while一直循环，利用休眠Sleep(200)控制速度,cleardevice();刷屏使背景食物不断刷新</p>
+<p>6.自定义函数</p>
+<p>（1）初始化蛇的坐标 初始化蛇长3段 分别写出他们的坐标，并初始化蛇一开始移动的方向</p>
+<p>（2）首先将蛇给画出来利用循环，利用填充矩形定义每一块（所选的最基本单位是10）
+这时候可以运行</p>
+<p>（3）让蛇能够动起来蛇身的移动原理后一个等一前一个。蛇头控制一定方向用switch，例如向下走y+10等等，以及控制蛇的运动，不能出现向上移动按 down 后向下移动</p>
+<p>（4）按键操作 char userKey = _getch();，用switch实现 键盘控制的方向移动,控制蛇的运动，不能出现向上移动按 down 后向下移动</p>
+<p>(5)初始化食物，定于食物的大小，并让食物随机生成，并且不能够出现在蛇的身上,明确食物该不该出现</p>
+<p>（6）画出食物 选取食物的颜色边框等等</p>
+<p>（7）吃食物，当蛇头等于食物坐标时，食物小时，并且长度+1，分数+10</p>
+<p>（8）显示分数，格式化打印分数char grade[20] = &ldquo;&quot;;sprintf_s(grade, &ldquo;grade:%d&rdquo;, food.grade);outtextxy(650, 50, grade);，位置，//文本输出 会报错，之后更改字符集类型 使用多杰字符集，	settextstyle(25,0,&ldquo;楷体&rdquo;);字体大小，</p>
+<p>（9）判断蛇是否死了MessageBox(hwnd, &ldquo;撞墙了,游戏结束&rdquo;, &ldquo;Game Over&rdquo;, MB_OK);//弹出窗口，（HWND hwnd = NULL;//定义窗口句柄），并且break main函数中的无线循环</p>
+<p>7.游戏音乐，将音乐放入所编程同一个文件夹中mciSendString(&ldquo;open 1.mp3&rdquo;,0,0,0);打开音乐， 
+mciSendString(&ldquo;play 1.mp3&rdquo;, 0, 0, 0);播放音乐 1.MP3为音乐名字//
+同时还要再游戏结束时结束音乐 mciSendString(&ldquo;close 1.mp3&rdquo;, 0, 0, 0);//音乐关闭</p>
+<p>&ndash;如果报错</p>
+<p>第一种解决方法 添加 #pragma comment(lib,&ldquo;winmm.lib&rdquo;)</p>
+<p>第二种解决方法 文件属性 &gt;链接器&gt;输入&gt;附加依赖项 添加winmm.lib</p>
+<p>8.运行生成.exe</p>
+<p>9.完结撒花</p>
+<hr>
+<hr>
+<p>代码：（音乐部分已被注释掉了，需要这样配置才能运行）</p>
+<p>在项目 右击属性-&gt;配置属性-&gt;高级-&gt;字符集:选择 使用多字节字符集</p>
+<p><img src="https://ae01.alicdn.com/kf/Hd581d9bfcb124b4daa9f379f02111a37N.jpg" alt="配置图片"></p>
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;graphics.h&gt;   // easyX 软件
+#include&lt;conio.h&gt;	   //图片
+#include&lt;time.h&gt;		//时间
+#include&lt;mmsystem.h&gt;//添加音乐
+#pragma comment(lib,&quot;winmm.lib&quot;)
+/*------------- 结构体*/
+//定义坐标结构体 来存储坐标
+typedef struct point
+{
+	int x, y;
+}MYPOINT;  //取名
+//蛇
+struct Snake
+{
+	MYPOINT xy[100]; //坐标
+	int position;	//方向
+	int num;	//长度
+}snake;
+//食物
+struct
+{
+	MYPOINT fdxy; //坐标
+	int flag;	//标记
+	int grade;	//分数
+}food;
+//枚举 方向
+enum position { up, down, left, right };
+/*---------------模块功能化设计*/
+//首先初始化snake
+void initsnake()
+{
+	//前3节的蛇 坐标初始化
+	snake.xy[2].x = 0;
+	snake.xy[2].y = 0;
+
+	snake.xy[1].x = 10;
+	snake.xy[1].y = 0;
+
+	snake.xy[0].x = 20;
+	snake.xy[0].y = 0;
+
+	snake.position = right;//方向
+	snake.num = 3;
+}
+//把蛇给画出来
+void drawSnake()
+{
+	//绘制填充矩形
+	for (int i = 0; i &lt; snake.num; i++)
+	{
+		setlinecolor(BLACK);
+		setfillcolor(WHITE);//随机函数 rand
+		fillrectangle(snake.xy[i].x, snake.xy[i].y, snake.xy[i].x + 10, snake.xy[i].y + 10);
+	}
+}
+//动起来
+void moveSnake()
+{
+	//移动原理 坐标转换
+	for (int i = snake.num - 1; i &gt; 0; i--)
+	{
+		snake.xy[i].x = snake.xy[i - 1].x;
+		snake.xy[i].y = snake.xy[i - 1].y;
+
+	}
+	//蛇头的移动
+	switch (snake.position)
+	{
+	case up:
+		snake.xy[0].y -= 10;
+		break;
+	case down:
+		snake.xy[0].y += 10;
+		break;
+	case right:
+		snake.xy[0].x += 10;
+		break;
+	case left:
+		snake.xy[0].x -= 10;
+		break;
+	}
+}
+//按键操作
+void keyDown()
+{
+	char userKey = _getch();
+	switch (userKey)
+	{
+	case'w':
+	case'W':
+	case'72':
+		if (snake.position != down)
+			snake.position = up;
+		break;
+	case's':
+	case'S':
+	case'80':
+		if (snake.position != up)
+			snake.position = down;
+		break;
+	case'A':
+	case'a':
+	case'75':
+		if (snake.position != right)
+			snake.position = left;
+		break;
+	case'd':
+	case'D':
+	case'77':
+		if (snake.position != left)
+			snake.position = right;
+		break;
+	}
+
+}
+//食物
+//初始化食物
+void initFood()
+{
+	food.fdxy.x = rand() % 80 * 10; //定义食物范围
+	food.fdxy.y = rand() % 60 * 10; \
+		food.flag = 1;//   1 代表存在   0
+		//食物不能出现再蛇身上
+	for (int i = 0; i &lt; snake.num; i++)
+	{
+		if (food.fdxy.x == snake.xy[i].x &amp;&amp; food.fdxy.y == snake.xy[i].y)
+		{
+			food.fdxy.x = rand() % 80 * 10;
+			food.fdxy.y = rand() % 60 * 10;
+		}
+
+	}
+}
+//画食物
+void drawFood()
+{
+	setfillcolor(BLACK);
+	setfillcolor(RGB(rand() % 255, rand() % 255, rand() % 255));//随机函数 rand
+	fillrectangle(food.fdxy.x, food.fdxy.y, food.fdxy.x + 10, food.fdxy.y + 10);
+}
+//吃食物
+void eatFood()
+{
+	if (snake.xy[0].x == food.fdxy.x &amp;&amp; snake.xy[0].y == food.fdxy.y)
+	{
+		snake.num++;
+		food.flag = 0;
+		food.grade += 10;
+
+	}
+}
+// 显示分数
+void showGrade()
+{
+	//格式化打印
+	char grade[20] = &quot;&quot;;
+	sprintf_s(grade, &quot;grade:%d&quot;, food.grade);//视频用的 sprintf报错
+	settextcolor(LIGHTGREEN);
+	settextstyle(25, 0, &quot;楷体&quot;);
+	outtextxy(650, 50, grade);//文本输出 会报错，之后更改字符集类型 使用多杰字符集
+
+}
+//边界
+HWND hwnd = NULL;//定义窗口句柄
+int snakeDie()
+{
+	//撞墙
+	if (snake.xy[0].x &gt; 800 || snake.xy[0].x &lt; 0 || snake.xy[0].y&gt;600 || snake.xy[0].y &lt; 0)
+	{
+		//mciSendString(&quot;close 1.mp3&quot;, 0, 0, 0);//音乐关闭
+		MessageBox(hwnd, &quot;撞墙了,游戏结束&quot;, &quot;Game Over&quot;, MB_OK);//弹出窗口
+		return 1;
+	}
+	//自杀
+	for (int i = 1; i &lt; snake.num; i++)
+	{
+		if (snake.xy[0].x == snake.xy[i].x &amp;&amp; snake.xy[0].y == snake.xy[i].y)
+		{
+			//mciSendString(&quot;close 1.mp3&quot;, 0, 0, 0);//音乐关闭
+			MessageBox(hwnd, &quot;自杀了,游戏结束&quot;, &quot;Game Over&quot;, MB_OK);//弹出窗口
+			return 1;
+
+		}
+	}
+	return 0;
+}
+int main()
+{
+	srand((unsigned int)time(NULL));//随机函数
+	//创建图形窗口：初始化图形环境
+	initgraph(800, 600);			//创建大小 宽，高
+	setbkcolor(RGB(157, 157, 255));		//游戏背景颜色 rgb 颜色
+	cleardevice();					//刷新 清屏 否则背景不能够刷新
+	//mciSendString(&quot;open 1.mp3&quot;, 0, 0, 0); //音乐 报错 #pragma comment(lib,&quot;winmm.lib&quot;)就可以了
+	//mciSendString(&quot;play 1.mp3&quot;, 0, 0, 0);//第二种放大 属性 &gt;链接器&gt;输入&gt;附加依赖项 添加winmm.lib
+	initsnake();
+	drawSnake();
+	while (true)
+	{
+		cleardevice();					//刷新 清屏 否则背景不能够刷新
+		moveSnake(); //调用 蛇移动
+		drawSnake();	//每次移动都重新布局
+		if (food.flag == 0)// 当食物 为0时才能够继续初始化
+		{
+			initFood();
+		}
+		if (_kbhit()) //_khbit 固定用法 按键	 才可以调用这个 按键操作 函数
+		{
+			keyDown();
+		}
+		if (snakeDie())
+		{
+			break;
+		}
+		drawFood();
+		eatFood();
+		showGrade();
+		Sleep(200);//调用休眠函数 控制次数
+	}
+
+
+
+
+	_getch();					//防止闪屏：等待用户输入一个字符
+	closegraph();				//关闭窗口环境 q清屏处理
+	return 0;
+}
+// 查看视频https://www.bilibili.com/video/BV1Tp4y1C7te?from=search&amp;seid=3897201515193623160
+</code></pre><p>最后感谢收看,如果遇到问题欢迎请教。</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://chechez.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>

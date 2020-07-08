@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website of Jane Doe</title>
+    <link>https://chechez.github.io/</link>
+    <description>Recent content on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Jul 2020 10:17:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://chechez.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C语言贪食蛇小游戏</title>
+      <link>https://chechez.github.io/post/c/</link>
+      <pubDate>Wed, 08 Jul 2020 10:17:18 +0800</pubDate>
+      
+      <guid>https://chechez.github.io/post/c/</guid>
+      <description>本次用Visual Studio 2019 以及easyX软件实现
+1.建立源文件,写出最基本的三个c语句#{}r0; 加入#include&amp;lt;graphics.h&amp;gt;即 easyX软件，#include&amp;lt;conio.h&amp;gt; 时间 ，#include&amp;lt;mmsystem.h&amp;gt;
+2.main函数里 initgraph(宽，高)创建游戏空间的大小,closegraph();用于关闭工作空间,之后定义游戏的背景 setbcolor（RGB(,,,)） cleardevice（） 刷新屏幕 否则；背景不能够刷新_getch();防止闪屏：等待用户输入一个字符，</description>
+    </item>
+    
+    <item>
+      <title>我的第一个博客</title>
+      <link>https://chechez.github.io/post/blog/</link>
+      <pubDate>Wed, 08 Jul 2020 10:16:22 +0800</pubDate>
+      
+      <guid>https://chechez.github.io/post/blog/</guid>
+      <description>Hellow World</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://chechez.github.io/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://chechez.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://chechez.github.io/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://chechez.github.io/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
+    </item>
+    
+  </channel>
+</rss>
