@@ -4,20 +4,20 @@
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="一个普通大学生">
     
-    <link rel="stylesheet" href="https://chechez.github.io/--buildDrafts/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
     
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
-    <link rel="shortcut icon" href="https://chechez.github.io/--buildDrafts/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/--buildDrafts/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/--buildDrafts/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/--buildDrafts/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://chechez.github.io/--buildDrafts/">
+    <link rel="shortcut icon" href="https://chechez.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://chechez.github.io/">
     
     
-    <script type="text/javascript" src="https://chechez.github.io/--buildDrafts/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://chechez.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://chechez.github.io/--buildDrafts/images/site-feature-image.png"/>
+<meta name="twitter:image" content="https://chechez.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="一个普通大学生"/>
@@ -25,7 +25,7 @@
 </head><body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
       <div class="title">
-        <img src="https://chechez.github.io/--buildDrafts/images/touxiang.jpg" alt="profile picture">
+        <img src="https://chechez.github.io/images/touxiang.jpg" alt="profile picture">
         <h3 title=""><a href="/">车车的博客</a></h3>
         <div class="description">
           <p>一个普通大学生</p>
@@ -73,16 +73,16 @@
         
         
         
-        <li><a class="current" href="/--buildDrafts/" title="">首页</a></li>
+        <li><a class="current" href="/" title="">首页</a></li>
         
         
-        <li><a  href="/--buildDrafts/post/" title="">C语言</a></li>
+        <li><a  href="/post/" title="">C语言</a></li>
         
         
-        <li><a  href="/--buildDrafts/c&#43;&#43;/" title="">C&#43;&#43;</a></li>
+        <li><a  href="/c&#43;&#43;/" title="">C&#43;&#43;</a></li>
         
         
-        <li><a  href="/--buildDrafts/about/" title="">about</a></li>
+        <li><a  href="/about/" title="">about</a></li>
         
     </ul>
     <div class="themeswitcher">
@@ -98,7 +98,26 @@
   
   <div class="post animated fadeInDown">
     <div class="post-title">
-      <h3><a href="/--buildDrafts/post/c/">C语言贪食蛇小游戏</a>
+      <h3><a href="/c&#43;&#43;/2020.7.16/">c&#43;&#43;学习</a>
+      </h3>
+    </div>
+    <div class="post-content"><div class="p_part"><p> 函数的递归调用 实现数学排列组合函数 C(n,k)
+使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
+#include&lt;iostream&gt; using namespace std; int fun(int n, int k) { if (k &gt; n) //检查输入的数字是否正确 return 0; else if (n == k || k == 0) //函数递归调用的尽头 return 1; else return fun(n - 1, k) + fun(n - 1, k - 1); } int main() { int n, k, sum = 0; cout &lt;&lt; &quot;C(n,k) 输入&quot;&lt;&lt; endl; cin &gt;&gt; n &gt;&gt; k ; cout &lt;&lt;&quot;结果:&quot;&lt;&lt; fun(n, k) &lt;&lt; endl; return 0; }  读取数量不定的输入数据并求和 #include&lt;iostream&gt; using namespace std; int main() { int sum = 0, value; while (cin &gt;&gt; value) //当输入为为整形的数字时 循环结束 sum += value; cout &lt;&lt; &quot;结果&quot; &lt;&lt; sum &lt;&lt; endl; return 0; } </p></div>
+  
+  <div class="p_part"><p></p></div></div>
+    <div class="post-footer">
+      <div class="meta">
+        <div class="info"><i class="fa fa-sun-o"></i><span class="date">Thu, Jul 16, 2020</span>
+                 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="post animated fadeInDown">
+    <div class="post-title">
+      <h3><a href="/post/c/">C语言贪食蛇小游戏</a>
       </h3>
     </div>
     <div class="post-content"><div class="p_part"><p>本次用Visual Studio 2019 以及easyX软件实现
@@ -116,7 +135,7 @@
   
   <div class="post animated fadeInDown">
     <div class="post-title">
-      <h3><a href="/--buildDrafts/post/blog/">我的第一个博客</a>
+      <h3><a href="/post/blog/">我的第一个博客</a>
       </h3>
     </div>
     <div class="post-content"><div class="p_part"><p>Hello World</p></div>
@@ -144,13 +163,13 @@
 
 
 
-<script type="text/javascript" src="https://chechez.github.io/--buildDrafts/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://chechez.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
 
 
 
 
-<script type="text/javascript" src="https://chechez.github.io/--buildDrafts/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://chechez.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://chechez.github.io/--buildDrafts/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+<script type="text/javascript" src="https://chechez.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
 
 </html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43;s on Website of Jane Doe</title>
+    <link>https://chechez.github.io/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43;s on Website of Jane Doe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Jul 2020 20:08:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://chechez.github.io/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>c&#43;&#43;学习</title>
+      <link>https://chechez.github.io/c&#43;&#43;/2020.7.16/</link>
+      <pubDate>Thu, 16 Jul 2020 20:08:59 +0800</pubDate>
+      
+      <guid>https://chechez.github.io/c&#43;&#43;/2020.7.16/</guid>
+      <description> 函数的递归调用 实现数学排列组合函数 C(n,k)
+使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
+#include&amp;lt;iostream&amp;gt; using namespace std; int fun(int n, int k) { if (k &amp;gt; n) //检查输入的数字是否正确 return 0; else if (n == k || k == 0) //函数递归调用的尽头 return 1; else return fun(n - 1, k) + fun(n - 1, k - 1); } int main() { int n, k, sum = 0; cout &amp;lt;&amp;lt; &amp;quot;C(n,k) 输入&amp;quot;&amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k ; cout &amp;lt;&amp;lt;&amp;quot;结果:&amp;quot;&amp;lt;&amp;lt; fun(n, k) &amp;lt;&amp;lt; endl; return 0; }  读取数量不定的输入数据并求和 #include&amp;lt;iostream&amp;gt; using namespace std; int main() { int sum = 0, value; while (cin &amp;gt;&amp;gt; value) //当输入为为整形的数字时 循环结束 sum += value; cout &amp;lt;&amp;lt; &amp;quot;结果&amp;quot; &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; endl; return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>

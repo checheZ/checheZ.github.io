@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light"><head>
-    <title> 车车 | 404 Page not found </title>
+    <title> 车车 | c&#43;&#43;学习 </title>
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="一个普通大学生">
     
@@ -12,15 +12,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://chechez.github.io/404.html">
+    <link rel="canonical" href="https://chechez.github.io/c&#43;&#43;/2020.7.16/">
     
     
     <script type="text/javascript" src="https://chechez.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://chechez.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="一个普通大学生"/>
+<meta name="twitter:title" content="c&#43;&#43;学习"/>
+<meta name="twitter:description" content=" 函数的递归调用 实现数学排列组合函数 C(n,k)
+使用到的数学公式:C(n,k)=C(n-1,k)&#43;C(n-1,k-1)
+#include&lt;iostream&gt; using namespace std; int fun(int n, int k) { if (k &gt; n) //检查输入的数字是否正确 return 0; else if (n == k || k == 0) //函数递归调用的尽头 return 1; else return fun(n - 1, k) &#43; fun(n - 1, k - 1); } int main() { int n, k, sum = 0; cout &lt;&lt; &quot;C(n,k) 输入&quot;&lt;&lt; endl; cin &gt;&gt; n &gt;&gt; k ; cout &lt;&lt;&quot;结果:&quot;&lt;&lt; fun(n, k) &lt;&lt; endl; return 0; }  读取数量不定的输入数据并求和 #include&lt;iostream&gt; using namespace std; int main() { int sum = 0, value; while (cin &gt;&gt; value) //当输入为为整形的数字时 循环结束 sum &#43;= value; cout &lt;&lt; &quot;结果&quot; &lt;&lt; sum &lt;&lt; endl; return 0; } "/>
 
 </head><body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
@@ -93,9 +95,62 @@
 </div>
 
             <div class="autopagerize_page_element">
-                <div class="content"><div class="page_404">
-    <p>The page you are looking for is missing</p>
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>c&#43;&#43;学习
+        </h3>
+        
+        </div>
+
+    <hr>
+<h1 id="函数的递归调用">函数的递归调用</h1>
+<p>实现数学排列组合函数 C(n,k)</p>
+<p>使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+int fun(int n, int k) {
+	if (k &gt; n)   //检查输入的数字是否正确
+		return 0;
+	else if (n == k || k == 0) //函数递归调用的尽头
+		return 1;
+	else
+		return fun(n - 1, k) + fun(n - 1, k - 1);
+}
+int main() {
+	int n, k, sum = 0;
+	cout &lt;&lt; &quot;C(n,k) 输入&quot;&lt;&lt; endl;
+	cin &gt;&gt; n &gt;&gt; k ;
+	cout &lt;&lt;&quot;结果:&quot;&lt;&lt; fun(n, k) &lt;&lt; endl;
+
+	return 0;
+}
+</code></pre><hr>
+<h1 id="读取数量不定的输入数据并求和">读取数量不定的输入数据并求和</h1>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+int main() {
+	int sum = 0, value;
+	while (cin &gt;&gt; value) //当输入为为整形的数字时 循环结束
+		sum += value;
+	cout &lt;&lt; &quot;结果&quot; &lt;&lt; sum &lt;&lt; endl;
+	return 0;
+}
+</code></pre>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
 </div>
+
+
                 </div>
             </div>
         </div>
