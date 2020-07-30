@@ -13,10 +13,10 @@
     
     <item>
       <title>C语言贪食蛇小游戏</title>
-      <link>https://chechez.github.io/post/c/</link>
+      <link>https://chechez.github.io/post/snake.20.7.8/</link>
       <pubDate>Wed, 08 Jul 2020 10:17:18 +0800</pubDate>
       
-      <guid>https://chechez.github.io/post/c/</guid>
+      <guid>https://chechez.github.io/post/snake.20.7.8/</guid>
       <description>本次用Visual Studio 2019 以及easyX软件实现
 1.建立源文件,写出最基本的三个c语句#{}r0; 加入#include&amp;lt;graphics.h&amp;gt;即 easyX软件，#include&amp;lt;conio.h&amp;gt; 时间 ，#include&amp;lt;mmsystem.h&amp;gt;</description>
     </item>

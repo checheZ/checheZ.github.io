@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> 车车 | C&#43;&#43;学习02 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="一个普通大学生">
+    
+    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.af06a1b6479d75b72188f6d0eb7a8e732adf3c67239bdc157c0c7e92c0b57688.css" integrity="sha256-rwahtkeddbchiPbQ63qOcyrfPGcjm9wVfAx&#43;ksC1dog=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://chechez.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://chechez.github.io/c&#43;&#43;/02.20.7.29/">
+    
+    
+    <script type="text/javascript" src="https://chechez.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chechez.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43;学习02"/>
+<meta name="twitter:description" content="C&#43;&#43;面向对象程序 类的语法： class://类的名称{public: 公有成员private：私有成员protected:保护性成员(一般不用)};such as:#include&lt;iostream&gt;using namespace std;//类的定义class Clock {public:void setTime(int newH = 0, int newM = 0, int newS = 0);/* 赋值01也可以:Clock(int newH,int newM,int newS)Clock::	Clock(int newH, int newM, int newS)://初始化函数值即赋值 用 newH初始化hourhour(newH), minute(newM), second(newS) {}赋值02：Clock(int newH,int newM,int newS):hour(newH), minute(newM), second(newS){}*/void showTime();private:int hour, minute, second;};//成员函数的实现void Clock::setTime(int newH, int newM, int newS) {hour = newH;minute = newM;second = newS;}void Clock::showTime() {cout &lt;&lt; hour &lt;&lt; &quot;:&quot; &lt;&lt; minute &lt;&lt; &quot;:&quot; &lt;&lt; second;}//对象的使用int main() {Clock myClock;//取名myClock."/>
+
+</head>
+
+<script src="https://chechez.github.iojs/highlight.pack.js">
+</script><link rel="stylesheet" href="https://chechez.github.iocss/monokai.css">
+<script>hljs.initHighlightingOnLoad();</script><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://chechez.github.io/images/touxiang.jpg" alt="profile picture">
+        <h3 title=""><a href="/">车车的博客</a></h3>
+        <div class="description">
+          <p>一个普通大学生</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://de.linkedin.com/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/lxndrblz/anatole/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:mail@alexbilz.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; 车车 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">首页</a></li>
+        
+        
+        <li><a  href="/post/" title="">C语言</a></li>
+        
+        
+        <li><a  href="/c&#43;&#43;/" title="">C&#43;&#43;</a></li>
+        
+        
+        <li><a  href="/about/" title="">about</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>C&#43;&#43;学习02
+        </h3>
+        
+        </div>
+
+    <hr>
+<h1 id="c面向对象程序">C++面向对象程序</h1>
+<h2 id="类的语法">类的语法：</h2>
+<pre><code>class://类的名称
+{
+    public: 公有成员
+    private：私有成员
+    protected:保护性成员(一般不用)
+};
+such as:
+#include&lt;iostream&gt;
+using namespace std;
+	//类的定义
+class Clock {
+public:
+	void setTime(int newH = 0, int newM = 0, int newS = 0);
+/*  赋值01也可以:Clock(int newH,int newM,int newS)
+    Clock::	Clock(int newH, int newM, int newS):
+	//初始化函数值即赋值 用 newH初始化hour
+	hour(newH), minute(newM), second(newS) {
+	}
+    赋值02：Clock(int newH,int newM,int newS):
+    hour(newH), minute(newM), second(newS){}
+*/
+	void showTime();
+    
+private:
+	int hour, minute, second;
+};
+	//成员函数的实现
+void Clock::setTime(int newH, int newM, int newS) {
+	hour = newH;
+	minute = newM;
+	second = newS;
+}
+void Clock::showTime() {
+	cout &lt;&lt; hour &lt;&lt; &quot;:&quot; &lt;&lt; minute &lt;&lt; &quot;:&quot; &lt;&lt; second;
+
+}
+	//对象的使用
+int main() {
+	Clock myClock;//取名
+	myClock.setTime(8, 30, 30);
+	myClock.showTime();
+}
+</code></pre><h2 id="委托构造函数">委托构造函数：</h2>
+<p>一个构造函数想要委托另一个构造函数，那么被委托的构造函数应该包含较
+大数量的参数，初始化较多的成员变量。而且在委托其他构造函数后，不能
+再进行成员列表初始化，而只能在函数体内进行初始化其他成员变量。such as:</p>
+<pre><code>    Clock(int newH, int newM, int newS) :
+		hour(newH), minute(newM), second(newS) {}
+	Clock() :Clock(0, 2, 0) {}//调用有参数函数的构造函数
+</code></pre><h2 id="复制构造函数">复制构造函数：</h2>
+<p>类名::类名(const 类名&amp;对象名)//复制构造函数{函数体}=&quot;delete&quot;&ldquo;delete&rdquo;</p>
+<p>特点：只有单个形参， 且形参是对本类类型对象的引用（常用const修饰）</p>
+<p>指示编译器不生成默认复制构造函数    such as:</p>
+<pre><code>public:
+    Point(int xx = 0, int yy = 0) { x = xx; y = yy; }//构造函数内联
+	Point(const Point&amp; p) = delete;
+	//指示编译器不生成默认复制构造函数
+</code></pre><h2 id="总结举例">总结举例:</h2>
+<pre><code>//5_4.cpp p63举例  难度很高****
+#include &lt;iostream&gt;
+using namespace std;
+
+class Point {	//Point类定义
+public:	//外部接口
+	Point(int x = 0, int y = 0) : x(x), y(y) { //构造函数
+		//在构造函数中对count累加，所有对象共同维护同一个count
+		count++;
+	}	
+	Point(Point &amp;p) {	//拷贝构造函数
+		x = p.x;
+		y = p.y;
+
+		count++;
+	}
+	~Point() {  count--; }
+	int getX() { return x; }
+	int getY() { return y; }
+
+	void showCount() {		//输出静态数据成员
+		cout &lt;&lt; &quot;  Object count = &quot; &lt;&lt; count &lt;&lt; endl;
+	}
+private:	//私有数据成员
+	int x, y;
+	static int count;	//静态数据成员声明，用于记录点的个数
+};
+
+int Point::count = 0;	//静态数据成员定义和初始化，使用类名限定
+
+int main() {	//主函数
+	Point a(4, 5);	//定义对象a，其构造函数回使count增1
+	cout &lt;&lt; &quot;Point A: &quot; &lt;&lt; a.getX() &lt;&lt; &quot;, &quot; &lt;&lt; a.getY();
+	a.showCount();	//输出对象个数
+
+	Point b(a);	//定义对象b，其构造函数回使count增1
+	cout &lt;&lt; &quot;Point B: &quot; &lt;&lt; b.getX() &lt;&lt; &quot;, &quot; &lt;&lt; b.getY();
+	b.showCount();	//输出对象个数
+
+	return 0;
+}
+</code></pre><h2 id="类的组合定义一个新类-可以用已有类">类的组合:定义一个新类 可以用已有类</h2>
+<pre><code>//p66 类的组合程序举例
+#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+class point {//point 类的定义
+private:
+	int x, y;
+	static int num;
+public:
+	point(int a, int b) : x(a), y(b) { }
+	point(point&amp; p);
+	int getx() { return x; }
+	int gety() { return y; }
+
+};
+point::point(point&amp; p) {//拷贝构造函数的实现
+	x = p.x;
+	y = p.y;
+	cout &lt;&lt; &quot;calling the&quot; &lt;&lt; num &lt;&lt; endl;
+}
+int point::num = 0;
+/// ----------------------
+class line {//line 类的定义
+private:
+	point p1, p2;//point 类的对象p1.p2
+	double len;
+public:
+	line(point xp1, point xp2);
+	line(line&amp; l);
+	double getlen() { return len; }
+
+};
+line::line(point xp1, point xp2) :p1(xp1), p2(xp2) {
+	cout &lt;&lt; &quot;calling constructor of the line&quot; &lt;&lt; endl;
+	double x = static_cast&lt;double&gt;(p1.getx() - p2.getx());
+	double y = static_cast&lt;double&gt;(p1.gety() - p2.gety());
+	len = sqrt(x * x + y * y);
+}
+line::line(line&amp; l) :p1(l.p1), p2(l.p2) {
+	cout &lt;&lt; &quot;calling the copy construct of line&quot; &lt;&lt; endl;
+	len = l.len;
+}
+int main() {
+	point my1(1, 1), my2(4, 5);	//建立point对象
+	line lin(my1, my2);	//建立一个line类的对象
+	line lin2(lin);	//利用拷贝 构造函数建立一个新的对象
+	cout &lt;&lt; &quot;The length of the line is:&quot; &lt;&lt; lin.getlen() &lt;&lt; endl;
+	cout &lt;&lt; &quot;the length of the line2 is:&quot; &lt;&lt; lin2.getlen() &lt;&lt; endl;
+
+	return 0;
+};
+</code></pre><h2 id="前向引用">前向引用:</h2>
+<pre><code>class Fred;
+class Barney{   //定义为指针则正确
+	Fred x; 	//错误： 类Fred 的声明尚不完善
+}；				// 因为使用了内联成员函数中该类的对象
+class Fred{
+	Barney y;
+}
+</code></pre>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://chechez.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>

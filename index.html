@@ -4,7 +4,7 @@
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="一个普通大学生">
     
-    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.67cd718c0a3c8009c771494d381fb7128246a454bd0518fed97cb65d257db948.css" integrity="sha256-Z81xjAo8gAnHcUlNOB&#43;3EoJGpFS9BRj&#43;2Xy2XSV9uUg=" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.af06a1b6479d75b72188f6d0eb7a8e732adf3c67239bdc157c0c7e92c0b57688.css" integrity="sha256-rwahtkeddbchiPbQ63qOcyrfPGcjm9wVfAx&#43;ksC1dog=" crossorigin="anonymous" type="text/css">
     
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
@@ -22,7 +22,11 @@
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="一个普通大学生"/>
 
-</head><body><div class="sidebar animated fadeInDown">
+</head>
+
+<script src="https://chechez.github.iojs/highlight.pack.js">
+</script><link rel="stylesheet" href="https://chechez.github.iocss/monokai.css">
+<script>hljs.initHighlightingOnLoad();</script><body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
       <div class="title">
         <img src="https://chechez.github.io/images/touxiang.jpg" alt="profile picture">
@@ -98,11 +102,46 @@
   
   <div class="post animated fadeInDown">
     <div class="post-title">
-      <h3><a href="/c&#43;&#43;/2020.7.16/">c&#43;&#43;学习</a>
+      <h3><a href="/c&#43;&#43;/03.20.7.28/">C&#43;&#43;学习03</a>
       </h3>
     </div>
-    <div class="post-content"><div class="p_part"><p> 函数的递归调用 实现数学排列组合函数 C(n,k)
-使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
+    <div class="post-content"><div class="p_part"><p>指针 语法类型: 存储类型 数据类型 *指针名=初始地址;
+例： int *pa=&amp;a； 声明viod类型指针,该指针可以被赋予任何类型对象的地址
+#include&lt;iostream&gt;using namespace std;int main(){ = static_cast&lt;int* &gt;(p);//void指针转换为int指针cout &lt;&lt; &quot;chushu =&quot; &lt;&lt; *pint &lt;&lt; endl;return 0;void* p; //声明void 变量int i = 5;p = &amp;i; //void 类型指针指向整形变量int* pint} 指向函数的指针 通过指针访问对象 对象指针名-&gt;成员名 ptr-&gt;get() 相当于(*ptr).</p></div>
+  
+  <div class="p_part"><p></p></div></div>
+    <div class="post-footer">
+      <div class="meta">
+        <div class="info"><i class="fa fa-sun-o"></i><span class="date">Wed, Jul 29, 2020</span>
+                 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="post animated fadeInDown">
+    <div class="post-title">
+      <h3><a href="/c&#43;&#43;/02.20.7.29/">C&#43;&#43;学习02</a>
+      </h3>
+    </div>
+    <div class="post-content"><div class="p_part"><p>C++面向对象程序 类的语法： class://类的名称{public: 公有成员private：私有成员protected:保护性成员(一般不用)};such as:#include&lt;iostream&gt;using namespace std;//类的定义class Clock {public:void setTime(int newH = 0, int newM = 0, int newS = 0);/* 赋值01也可以:Clock(int newH,int newM,int newS)Clock::	Clock(int newH, int newM, int newS)://初始化函数值即赋值 用 newH初始化hourhour(newH), minute(newM), second(newS) {}赋值02：Clock(int newH,int newM,int newS):hour(newH), minute(newM), second(newS){}*/void showTime();private:int hour, minute, second;};//成员函数的实现void Clock::setTime(int newH, int newM, int newS) {hour = newH;minute = newM;second = newS;}void Clock::showTime() {cout &lt;&lt; hour &lt;&lt; &quot;:&quot; &lt;&lt; minute &lt;&lt; &quot;:&quot; &lt;&lt; second;}//对象的使用int main() {Clock myClock;//取名myClock.</p></div>
+  
+  <div class="p_part"><p></p></div></div>
+    <div class="post-footer">
+      <div class="meta">
+        <div class="info"><i class="fa fa-sun-o"></i><span class="date">Wed, Jul 29, 2020</span>
+                 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="post animated fadeInDown">
+    <div class="post-title">
+      <h3><a href="/c&#43;&#43;/01.20.7.16/">C&#43;&#43;学习01</a>
+      </h3>
+    </div>
+    <div class="post-content"><div class="p_part"><p> 函数的递归调用 实现数学排列组合函数 C(n,k) 使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
 #include&lt;iostream&gt; using namespace std; int fun(int n, int k) { if (k &gt; n) //检查输入的数字是否正确 return 0; else if (n == k || k == 0) //函数递归调用的尽头 return 1; else return fun(n - 1, k) + fun(n - 1, k - 1); } int main() { int n, k, sum = 0; cout &lt;&lt; &quot;C(n,k) 输入&quot;&lt;&lt; endl; cin &gt;&gt; n &gt;&gt; k ; cout &lt;&lt;&quot;结果:&quot;&lt;&lt; fun(n, k) &lt;&lt; endl; return 0; }  读取数量不定的输入数据并求和 #include&lt;iostream&gt; using namespace std; int main() { int sum = 0, value; while (cin &gt;&gt; value) //当输入为为整形的数字时 循环结束 sum += value; cout &lt;&lt; &quot;结果&quot; &lt;&lt; sum &lt;&lt; endl; return 0; } </p></div>
   
   <div class="p_part"><p></p></div></div>
@@ -117,7 +156,7 @@
   
   <div class="post animated fadeInDown">
     <div class="post-title">
-      <h3><a href="/post/c/">C语言贪食蛇小游戏</a>
+      <h3><a href="/post/snake.20.7.8/">C语言贪食蛇小游戏</a>
       </h3>
     </div>
     <div class="post-content"><div class="p_part"><p>本次用Visual Studio 2019 以及easyX软件实现

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head>
+    <title> 车车 | C&#43;&#43;学习03 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="一个普通大学生">
+    
+    <link rel="stylesheet" href="https://chechez.github.io/css/style.min.af06a1b6479d75b72188f6d0eb7a8e732adf3c67239bdc157c0c7e92c0b57688.css" integrity="sha256-rwahtkeddbchiPbQ63qOcyrfPGcjm9wVfAx&#43;ksC1dog=" crossorigin="anonymous" type="text/css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://chechez.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chechez.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chechez.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chechez.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://chechez.github.io/c&#43;&#43;/03.20.7.28/">
+    
+    
+    <script type="text/javascript" src="https://chechez.github.io/js/anatole-header.min.c275265a259296f3dd50e8236a77fcbcadb1dbb9597d3045c675dcc2c7c58a93.js" integrity="sha256-wnUmWiWSlvPdUOgjanf8vK2x27lZfTBFxnXcwsfFipM=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chechez.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="C&#43;&#43;学习03"/>
+<meta name="twitter:description" content="指针 语法类型: 存储类型 数据类型 *指针名=初始地址;
+例： int *pa=&amp;a； 声明viod类型指针,该指针可以被赋予任何类型对象的地址
+#include&lt;iostream&gt;using namespace std;int main(){ = static_cast&lt;int* &gt;(p);//void指针转换为int指针cout &lt;&lt; &quot;chushu =&quot; &lt;&lt; *pint &lt;&lt; endl;return 0;void* p; //声明void 变量int i = 5;p = &amp;i; //void 类型指针指向整形变量int* pint} 指向函数的指针 通过指针访问对象 对象指针名-&gt;成员名 ptr-&gt;get() 相当于(*ptr)."/>
+
+</head>
+
+<script src="https://chechez.github.iojs/highlight.pack.js">
+</script><link rel="stylesheet" href="https://chechez.github.iocss/monokai.css">
+<script>hljs.initHighlightingOnLoad();</script><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://chechez.github.io/images/touxiang.jpg" alt="profile picture">
+        <h3 title=""><a href="/">车车的博客</a></h3>
+        <div class="description">
+          <p>一个普通大学生</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://de.linkedin.com/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/lxndrblz/anatole/" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://www.instagram.com/" rel="me" aria-label="instagram">
+          <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:mail@alexbilz.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; 车车 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <ul class="nav">
+        
+        
+        
+        <li><a  href="/" title="">首页</a></li>
+        
+        
+        <li><a  href="/post/" title="">C语言</a></li>
+        
+        
+        <li><a  href="/c&#43;&#43;/" title="">C&#43;&#43;</a></li>
+        
+        
+        <li><a  href="/about/" title="">about</a></li>
+        
+    </ul>
+    <div class="themeswitcher">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>C&#43;&#43;学习03
+        </h3>
+        
+        </div>
+
+    <h1 id="指针">指针</h1>
+<p>语法类型: 存储类型 数据类型 *指针名=初始地址;</p>
+<p><code>例： int *pa=&amp;a；</code>
+声明viod类型指针,该指针可以被赋予任何类型对象的地址</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{ = static_cast&lt;int* &gt;(p);//void指针转换为int指针
+   cout &lt;&lt; &quot;chushu =&quot; &lt;&lt; *pint &lt;&lt; endl;
+   return 0;
+   void* p; //声明void 变量
+   int i = 5;
+   p = &amp;i; //void 类型指针指向整形变量
+   int* pint
+}
+</code></pre><hr>
+<h2 id="指向函数的指针-通过指针访问对象">指向函数的指针 通过指针访问对象</h2>
+<p>对象指针名-&gt;成员名
+ptr-&gt;get() 相当于(*ptr).getx();</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+class point {
+private:
+	int x;
+public:
+	point(int x, int y):x(x),y(y) {
+	}
+	int getx() { return x; }
+};
+int main() {
+	point a(4, 5);
+	point* p = &amp;a;
+	cout &lt;&lt; &quot;x=&quot; &lt;&lt; p-&gt;getx() &lt;&lt; endl;
+	return 0;
+}
+</code></pre><hr>
+<h2 id="this-指针">this 指针</h2>
+<p>隐含于类的每一个非静态成员函数中指出成员函数所操作的对象
+当通过一个对象调用成员函数时，系统小将该对象的地址赋值给this 指针，然后调用成员函数名成员函数对对象的数据成员进行操作时，就隐含使用了this 指针
+point类的getx函数中的语句：</p>
+<pre><code>    return x;
+
+    相当于：
+
+    return this -&gt;x
+</code></pre>
+<hr>
+<h2 id="指向常量的指针-const">指向常量的指针 const</h2>
+<p>定义:不能通过指向常量的指针改变所指对象的值，但本身可以改变，可以指向另外的对象</p>
+<pre><code>int a;
+const int *p1=&amp;a;//p1 时指向常量的指针
+int b;
+p1=&amp;b;//正确，p1本身的值可以改变
+*p1=1；//编译错误，不能通过p1改变指针的的对象
+</code></pre><hr>
+<h2 id="指针类型的常量">指针类型的常量</h2>
+<p>若声明指针常量，则指针本身的值不能被改变</p>
+<pre><code>int a;
+int *const p2=&amp;a;
+P2=&amp;b; //错误 ，p2 是指针常量，值不能被改变，只能指向 a
+</code></pre><hr>
+<h2 id="指针数组">指针数组</h2>
+<pre><code>int a[10],*pa;
+pa=&amp;a[0]; 
+//或者 pa=a;
+short a[4]; short *p=a;
+相当于*p=a[0],*(p+1)=a[1],*(p+2)=a[2]
+</code></pre><hr>
+<h2 id="定义指向数组元素的指针">定义指向数组元素的指针</h2>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+int main()
+{
+	int line1[] = { 1,0,0 };
+	int line2[] = { 0,10,0 };
+	int line3[] = { 3,3,2 };
+	int* pline[3] = { line1,line2,line3 };
+	cout &lt;&lt; &quot;输出:&quot; &lt;&lt; endl;
+	for (int i = 0; i &lt; 3; i++) {
+		for (int j = 0; j &lt; 3; j++)
+			cout &lt;&lt; pline[i][j]&lt;&lt;&quot;  &quot;;
+	//cout- pline[0][1]=line1[1]
+		cout &lt;&lt; endl;
+	}
+	return 0;
+}
+</code></pre><p>与数组不同的是 数组是全部元素 排序来进行 a[][]</p>
+<p>但是 指针不同的是 a[0]:下有a[0][0],a[0][1]&hellip;</p>
+<p>a[1]下有:a[1][0],a[1][1]&hellip;</p>
+<hr>
+<h2 id="指针类型的函数">指针类型的函数</h2>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+int main() {
+	int* newintvar();
+	int* intptr = newintvar();
+	*intptr = 5;//访问的是合法有效的地址
+	//delete 很重要 如果忘记在这里释放，会造成内存泄漏
+	delete intptr;
+	return 0;
+}
+int* newintvar() {
+	int* p = new int();
+	return p;//返回的地址指向的是动态分配的空间
+}//函数运行结束，p中的地址仍有效
+</code></pre><hr>
+<hr>
+<h1 id="内存分配与释放">内存分配与释放</h1>
+<p>动态申请内存操作符 new; new 类型名T(初始化参数列表)功能：程序执行，申请用于存放T类型对象的内存空间，并初值</p>
+<p>结果值:
+成功:T类型的指针，指向新分配的内存; 失败:抛出异常;</p>
+<p>释放内存操作符 delete; 如果new,!!!必须delete; delete 指针p;</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Point {
+public:
+	Point() : x(0), y(0) {
+		cout &lt;&lt; &quot;Default Constructor called.&quot; &lt;&lt; endl;
+	}
+	Point(int x, int y) : x(x), y(y) {
+		cout &lt;&lt; &quot;Constructor called.&quot; &lt;&lt; endl;
+	}
+	~Point() { cout &lt;&lt; &quot;Destructor called.&quot; &lt;&lt; endl; }
+private:
+	int x, y;
+};
+int main() {
+	cout &lt;&lt; &quot;Step one: &quot; &lt;&lt; endl;
+	Point* ptr1 = new Point;	//动态创建对象，没有给出参数列表，因此调用缺省构造函数
+	delete ptr1;	//删除对象，自动调用析构函数
+
+	cout &lt;&lt; &quot;Step two: &quot; &lt;&lt; endl;
+	ptr1 = new Point(1, 2);		//动态创建对象，并给出参数列表，因此调用有形参的构造函数
+	delete ptr1;	//删除对象，自动调用析购函数
+sheng'qingreturn 0;
+}
+</code></pre><hr>
+<h2 id="申请和释放动态内存一">申请和释放动态内存(一)</h2>
+<p>new 类型名T[数组长度]</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+class Point {
+public:
+	Point() : x(0), y(0) {
+		cout &lt;&lt; &quot;Default Constructor called.&quot; &lt;&lt; endl;
+	}
+	~Point() { cout &lt;&lt; &quot;Destructor called.&quot; &lt;&lt; endl; }
+	void move(int newX, int newY) {
+		x = newX;
+		y = newY;
+	}
+private:
+	int x, y;
+};
+int main() {
+	Point* ptr = new Point[2];	//创建对象数组 2次
+	ptr[0].move(5, 10);		//通过指针访问数组元素的成员
+	ptr[1].move(15, 20);	//通过指针访问数组元素的成员
+	cout &lt;&lt; &quot;Deleting...&quot; &lt;&lt; endl;
+	delete[] ptr;	//删除整个对象数组  2次
+	return 0;
+}
+</code></pre><p>动态创建多维数组</p>
+<pre><code>char (*fp)[3];      //列
+fp=new char[2][3] 
+</code></pre><hr>
+<h2 id="申请和释放动态内存二">申请和释放动态内存(二)</h2>
+<p>将动态数组封装成类更加简洁，便于管理，可以在访问数组元素前检查 下标是否越界</p>
+<p>assert宏的原型定义在&lt;assert.h&gt;中，其作用是如果它的条件返回错误，则终止程序执行，原型定义：
+#include &lt;assert.h&gt;</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+using namespace std;
+
+class Point {
+public:
+	Point() : x(0), y(0) {
+		cout &lt;&lt; &quot;Default Constructor called.&quot; &lt;&lt; endl;
+	}
+
+	Point(int x, int y) : x(x), y(y) {
+		cout &lt;&lt; &quot;Constructor called.&quot; &lt;&lt; endl;
+	}
+
+	~Point() { cout &lt;&lt; &quot;Destructor called.&quot; &lt;&lt; endl; }
+
+	int getX() const { return x; }
+
+	int getY() const { return y; }
+
+	void move(int newX, int newY) {
+		x = newX;
+		y = newY;
+	}
+private:
+	int x, y;
+};
+
+//动态数组类
+class ArrayOfPoints {
+public:
+	ArrayOfPoints(int size) : size(size) {
+		points = new Point[size];
+	}
+
+	~ArrayOfPoints() {
+		cout &lt;&lt; &quot;Deleting...&quot; &lt;&lt; endl;
+		delete[] points;
+	}
+
+	//获得下标为index的数组元素
+	// &amp;作用是 使  数组为左值 才能够修改move
+	Point&amp; a(int index) {  
+		//Point element(int index) {
+		assert(index &gt;= 0 &amp;&amp; index &lt; size);	//如果数组下标不会越界，程序中止
+		/*assert宏的原型定义在&lt;assert.h&gt;中，其作用是如果它的条件返回错误，则终止程序执行，
+            原型定义： #include &lt;assert.h&gt;*/
+		return points[index];
+	}
+private:
+	Point* points;	//指向动态数组首地址
+	int size;		//数组大小
+};
+
+int main() {
+	int count;
+	cout &lt;&lt; &quot;Please enter the count of points: &quot;;
+	cin &gt;&gt; count;
+	ArrayOfPoints points(count);	//创建对象数组
+	points.a(0).move(5, 10);	//通过访问数组元素的成员
+	points.a(1).move(15, 20);	//通过类访问数组元素的成员
+	return 0;
+}
+</code></pre><hr>
+<h2 id="智能指针">智能指针</h2>
+<p>1 unique_ptr:不允许多个指针共享资源，可以用标准库的move函数转移指针</p>
+<p>2 shared_ptr:多个指针共享资源</p>
+<p>3 weak_ptr:可复制shared_ptr,但其构造或者释放对资源不产生影响</p>
+<hr>
+<p>END           by2020/7/29/23:00</p>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+      </div>
+    </div>
+
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://chechez.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://chechez.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>

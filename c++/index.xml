@@ -6,19 +6,38 @@
     <description>Recent content in C&#43;&#43;s on Website of Jane Doe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jul 2020 20:08:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2020 19:53:54 +0800</lastBuildDate>
     
 	<atom:link href="https://chechez.github.io/c++/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>c&#43;&#43;学习</title>
-      <link>https://chechez.github.io/c&#43;&#43;/2020.7.16/</link>
+      <title>C&#43;&#43;学习03</title>
+      <link>https://chechez.github.io/c&#43;&#43;/03.20.7.28/</link>
+      <pubDate>Wed, 29 Jul 2020 19:53:54 +0800</pubDate>
+      
+      <guid>https://chechez.github.io/c&#43;&#43;/03.20.7.28/</guid>
+      <description>指针 语法类型: 存储类型 数据类型 *指针名=初始地址;
+例： int *pa=&amp;amp;a； 声明viod类型指针,该指针可以被赋予任何类型对象的地址
+#include&amp;lt;iostream&amp;gt;using namespace std;int main(){ = static_cast&amp;lt;int* &amp;gt;(p);//void指针转换为int指针cout &amp;lt;&amp;lt; &amp;quot;chushu =&amp;quot; &amp;lt;&amp;lt; *pint &amp;lt;&amp;lt; endl;return 0;void* p; //声明void 变量int i = 5;p = &amp;amp;i; //void 类型指针指向整形变量int* pint} 指向函数的指针 通过指针访问对象 对象指针名-&amp;gt;成员名 ptr-&amp;gt;get() 相当于(*ptr).</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;学习02</title>
+      <link>https://chechez.github.io/c&#43;&#43;/02.20.7.29/</link>
+      <pubDate>Wed, 29 Jul 2020 08:48:51 +0800</pubDate>
+      
+      <guid>https://chechez.github.io/c&#43;&#43;/02.20.7.29/</guid>
+      <description>C++面向对象程序 类的语法： class://类的名称{public: 公有成员private：私有成员protected:保护性成员(一般不用)};such as:#include&amp;lt;iostream&amp;gt;using namespace std;//类的定义class Clock {public:void setTime(int newH = 0, int newM = 0, int newS = 0);/* 赋值01也可以:Clock(int newH,int newM,int newS)Clock::	Clock(int newH, int newM, int newS)://初始化函数值即赋值 用 newH初始化hourhour(newH), minute(newM), second(newS) {}赋值02：Clock(int newH,int newM,int newS):hour(newH), minute(newM), second(newS){}*/void showTime();private:int hour, minute, second;};//成员函数的实现void Clock::setTime(int newH, int newM, int newS) {hour = newH;minute = newM;second = newS;}void Clock::showTime() {cout &amp;lt;&amp;lt; hour &amp;lt;&amp;lt; &amp;quot;:&amp;quot; &amp;lt;&amp;lt; minute &amp;lt;&amp;lt; &amp;quot;:&amp;quot; &amp;lt;&amp;lt; second;}//对象的使用int main() {Clock myClock;//取名myClock.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;学习01</title>
+      <link>https://chechez.github.io/c&#43;&#43;/01.20.7.16/</link>
       <pubDate>Thu, 16 Jul 2020 20:08:59 +0800</pubDate>
       
-      <guid>https://chechez.github.io/c&#43;&#43;/2020.7.16/</guid>
-      <description> 函数的递归调用 实现数学排列组合函数 C(n,k)
-使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
+      <guid>https://chechez.github.io/c&#43;&#43;/01.20.7.16/</guid>
+      <description> 函数的递归调用 实现数学排列组合函数 C(n,k) 使用到的数学公式:C(n,k)=C(n-1,k)+C(n-1,k-1)
 #include&amp;lt;iostream&amp;gt; using namespace std; int fun(int n, int k) { if (k &amp;gt; n) //检查输入的数字是否正确 return 0; else if (n == k || k == 0) //函数递归调用的尽头 return 1; else return fun(n - 1, k) + fun(n - 1, k - 1); } int main() { int n, k, sum = 0; cout &amp;lt;&amp;lt; &amp;quot;C(n,k) 输入&amp;quot;&amp;lt;&amp;lt; endl; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k ; cout &amp;lt;&amp;lt;&amp;quot;结果:&amp;quot;&amp;lt;&amp;lt; fun(n, k) &amp;lt;&amp;lt; endl; return 0; }  读取数量不定的输入数据并求和 #include&amp;lt;iostream&amp;gt; using namespace std; int main() { int sum = 0, value; while (cin &amp;gt;&amp;gt; value) //当输入为为整形的数字时 循环结束 sum += value; cout &amp;lt;&amp;lt; &amp;quot;结果&amp;quot; &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; endl; return 0; } </description>
     </item>
     
